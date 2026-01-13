@@ -27,7 +27,8 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run RSS Script
-      env: 
+      env:
+        RSS_JOURNALS: ${{ secrets.RSS_JOURNALS }}
         RSS_KEYWORDS: ${{ secrets.RSS_KEYWORDS }}
       run: python get_RSS.py
 
